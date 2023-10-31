@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>FORMULARIO utilizando JSP y SERVLET</h1>
-        <form>
+        <form action="controlador" method="post">
             <table>
                 <tr>
                     <td>Nombre</td>
