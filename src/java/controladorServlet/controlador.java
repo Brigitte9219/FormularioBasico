@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.calcular;
 
 /**
  *
@@ -29,6 +30,14 @@ public class controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        calcular obj=new calcular();
+        
+        obj.setNombre(request.getParameter("usuario"));
+        obj.setDireccion(request.getParameter("direccion"));
+        obj.setNumDiasTrabajados(Integer.parseInt(request.getParameter("dia")));
+        obj.setValorDia(Double.parseDouble(request.getParameter("valor")));
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("controlador");
