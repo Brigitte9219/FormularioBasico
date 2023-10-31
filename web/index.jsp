@@ -3,7 +3,7 @@
     Created on : 31 oct 2023, 10:56:09
     Author     : brigi
 --%>
-
+<%@page import="modelo.Calcular" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>FORMULARIO utilizando JSP y SERVLET</h1>
-        <form action="controlador" method="post">
+        <form action="Controlador" method="POST">
             <table>
                 <tr>
                     <td>Nombre</td>
@@ -35,6 +35,17 @@
                     <td><button type="submit">Calcular</button></td> 
                 </tr>
             </table>
+            <%
+                Calcular obj=new Calcular();
+                obj=(Calcular)request.getAttribute("ObjetoJava");
+                if(obj!=null){
+                out.println ("Nombre:"+obj.getNombre()+"<br/>");
+                out.println ("Direccion:"+obj.getDireccion()+"<br/>");
+                out.println ("# Dias Trabajados:"+obj.getNumDiasTrabajados()+"<br/>");
+                out.println ("Valor dia:"+obj.getValorDia()+"<br/>");
+                out.println ("Total Salario:"+obj.getSalario()+"<br/>");
+                }
+            %>
         </form>
     </body>
 </html>
