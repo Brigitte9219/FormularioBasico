@@ -17,19 +17,19 @@
             <table>
                 <tr>
                     <td>Nombre</td>
-                    <td><input type="text" name="usuario" placeholder="Nombre" /></td>
+                    <td><input type="text" placeholder="Nombre" name="usuario"/></td>
                 </tr>
                 <tr>
                     <td>Dirección</td>
-                    <td><input type="text" name="direccion" placeholder="Dirección" /></td>
+                    <td><input type="text" placeholder="Dirección" name="direccion"/></td>
                 </tr>
                 <tr>
                     <td># Dias Trabajados</td>
-                    <td><input type="text" name="dias" placeholder="# Dias Trabajados" /></td>
+                    <td><input type="text" placeholder="# Dias Trabajados" name="dias"/></td>
                 </tr>
                 <tr>
                     <td>Valor dia</td>
-                    <td><input type="text" name="valor" placeholder="Valor dia" /></td>
+                    <td><input type="text" placeholder="Valor dia" name="valor"/></td>
                 </tr>
                 <tr>
                     <td><button type="submit">Calcular</button></td> 
