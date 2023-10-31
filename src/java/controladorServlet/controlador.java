@@ -6,6 +6,7 @@ package controladorServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,10 +38,15 @@ public class controlador extends HttpServlet {
         obj.setDireccion(request.getParameter("direccion"));
         obj.setNumDiasTrabajados(Integer.parseInt(request.getParameter("dia")));
         obj.setValorDia(Double.parseDouble(request.getParameter("valor")));
+        obj.salario();
+        
+        request.setAttribute("ObjetoJava", obj);
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("controlador");
+            RequestDispatcher a=request.getRequestDispatcher("index.jsp");
+            a.forward(request, response);
+            //out.println("controlador");
             
         }
     }
