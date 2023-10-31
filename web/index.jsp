@@ -3,7 +3,7 @@
     Created on : 31 oct 2023, 10:56:09
     Author     : brigi
 --%>
-<%@page import="modelo.Calcular" %>
+<%@page import="modelo.calcular" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -36,8 +36,8 @@
                 </tr>
             </table>
             <%
-                Calcular obj=new Calcular();
-                obj=(Calcular)request.getAttribute("ObjetoJava");
+                calcular obj=new calcular();
+                obj=(calcular)request.getAttribute("ObjetoJava");
                 if(obj!=null){
                 out.println ("Nombre:"+obj.getNombre()+"<br/>");
                 out.println ("Direccion:"+obj.getDireccion()+"<br/>");

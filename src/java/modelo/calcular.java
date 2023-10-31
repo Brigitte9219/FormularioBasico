@@ -79,5 +79,19 @@ public class calcular {
     public void setValorDia(double valorDia) {
         this.valorDia = valorDia;
     }
+
+    /**
+     * @return the salario
+     */
+    public double getSalario() {
+        return salario;
+    }
+
+    /**
+     * @param salario the salario to set
+     */
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
     
 }
